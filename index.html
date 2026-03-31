@@ -17,13 +17,9 @@
             --tag-ongoing: #d97706;
             --nav-bg: rgba(225, 225, 225, 0.85); /* Lighter gray for a cleaner look */
             
-            /* Muted Circle Colors */
-            --circle-teal: rgba(150, 190, 190, 0.12);
-            --circle-cream: rgba(220, 200, 150, 0.12);
-            --circle-wine: rgba(114, 47, 55, 0.12);
-            --circle-coral: rgba(220, 120, 100, 0.12);
-            --circle-pink: rgba(200, 140, 140, 0.12);
-            --circle-green: rgba(100, 150, 120, 0.12);
+            /* Muted Gradient Colors */
+            --grad-left: rgba(100, 116, 139, 0.12); /* Subtle Slate Blue */
+            --grad-right: rgba(162, 115, 122, 0.12); /* Muted Dusty Rose */
         }
 
         .company-logo {
@@ -175,18 +171,16 @@
         .circle-artifact {
             position: absolute;
             border-radius: 50%;
-            filter: blur(45px);
+            filter: blur(120px);
             mix-blend-mode: multiply;
+            opacity: 0.8;
         }
 
-        /* Responsive Artifacts Positioning */
-        .cluster-1-circle-1 { top: 5%; right: 12%; width: 200px; height: 200px; background: var(--circle-teal); }
-        .cluster-1-circle-2 { top: 8%; right: 2%; width: 220px; height: 220px; background: var(--circle-cream); }
-        .cluster-1-circle-3 { top: 20%; right: 8%; width: 160px; height: 160px; background: var(--circle-wine); }
-        .cluster-2-circle-1 { top: 35%; right: 5%; width: 180px; height: 180px; background: var(--circle-coral); }
-        .cluster-2-circle-2 { top: 38%; right: 15%; width: 200px; height: 200px; background: var(--circle-pink); }
-        .cluster-3-circle-1 { bottom: 15%; left: 5%; width: 190px; height: 190px; background: var(--circle-wine); }
-        .cluster-3-circle-2 { bottom: 10%; left: 15%; width: 210px; height: 210px; background: var(--circle-teal); }
+        /* Dual-Sided Gradient Positioning */
+        .grad-left-top { top: -10%; left: -10%; width: 600px; height: 600px; background: var(--grad-left); }
+        .grad-right-mid { top: 25%; right: -15%; width: 700px; height: 700px; background: var(--grad-right); }
+        .grad-left-bottom { bottom: -10%; left: -15%; width: 650px; height: 650px; background: var(--grad-left); }
+        .grad-right-bottom { bottom: 5%; right: -10%; width: 550px; height: 550px; background: var(--grad-right); }
 
         .container {
             max-width: 1100px;
@@ -646,13 +640,10 @@
 </head>
 <body>
     <div class="bg-artifacts">
-        <div class="circle-artifact cluster-1-circle-1"></div>
-        <div class="circle-artifact cluster-1-circle-2"></div>
-        <div class="circle-artifact cluster-1-circle-3"></div>
-        <div class="circle-artifact cluster-2-circle-1"></div>
-        <div class="circle-artifact cluster-2-circle-2"></div>
-        <div class="circle-artifact cluster-3-circle-1"></div>
-        <div class="circle-artifact cluster-3-circle-2"></div>
+        <div class="circle-artifact grad-left-top"></div>
+        <div class="circle-artifact grad-right-mid"></div>
+        <div class="circle-artifact grad-left-bottom"></div>
+        <div class="circle-artifact grad-right-bottom"></div>
     </div>
 
     <nav class="navbar">
